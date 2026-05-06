@@ -109,20 +109,21 @@
         }
 
         .hero-photo {
-            width: 280px;
-            height: 280px;
+            width: 260px;
+            height: 340px;
             border-radius: 16px;
             object-fit: cover;
             object-position: top center;
             border: 2px solid var(--border);
-            margin-bottom: 16px;
-            filter: grayscale(30%) contrast(1.05);
+            margin-bottom: 20px;
+            filter: contrast(1.1) brightness(1.05);
             transition: all 0.3s;
         }
 
         .hero-photo:hover {
-            filter: grayscale(0%) contrast(1.1);
+            filter: contrast(1.15) brightness(1.1);
             border-color: var(--accent);
+            box-shadow: 0 8px 40px rgba(200, 255, 0, 0.15);
         }
 
         .hero-inner {
