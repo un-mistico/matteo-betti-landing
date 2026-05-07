@@ -3,476 +3,524 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matteo Betti — Consulente Marketing Full Stack</title>
-    <meta name="description" content="10+ anni di esperienza marketing con Unilever, Nestlé, P&G, Barilla, Samsung. Consulente marketing full stack per aziende che vogliono risultati concreti, non promesse.">
-    <meta name="keywords" content="consulente marketing, marketing consultant, freelance marketing Italia, strategia marketing B2B, consulente marketing Bologna">
+    <title>Matteo Betti — Dove il prodotto incontra il mercato</title>
+    <meta name="description" content="Consulente marketing full stack. Lavoro dove strategia, prodotto e crescita si incontrano. 10+ anni con Unilever, Nestlé, P&G, Barilla, Samsung. Team snelli, metodologie agili, risultati misurabili.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&display=swap" rel="stylesheet">
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
-            --bg: #0a0a0a;
-            --surface: #141414;
-            --surface-2: #1a1a1a;
-            --border: #2a2a2a;
-            --text: #e8e8e8;
-            --text-muted: #888;
+            --bg: #1a1a18;
+            --bg-warm: #1e1d1a;
+            --paper: #e8e2d6;
+            --paper-dark: #d4cec0;
+            --ink: #0d0d0c;
             --accent: #c8ff00;
-            --accent-dim: rgba(200, 255, 0, 0.1);
-            --accent-mid: rgba(200, 255, 0, 0.3);
-            --warm: #ff6b35;
+            --accent-2: #ff4d2e;
+            --text-light: #d4cec0;
+            --text-muted: #8a8478;
+            --border: #3a3830;
         }
 
         html { scroll-behavior: smooth; }
 
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Space Grotesk', sans-serif;
             background: var(--bg);
-            color: var(--text);
-            line-height: 1.7;
+            color: var(--paper);
+            line-height: 1.65;
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Navigation */
+        /* === NAV === */
         nav {
             position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
+            top: 0; left: 0; right: 0;
             z-index: 100;
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            background: rgba(10, 10, 10, 0.8);
-            border-bottom: 1px solid var(--border);
-            transition: all 0.3s ease;
+            background: var(--bg);
+            border-bottom: 2px solid var(--ink);
         }
-
         nav .nav-inner {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 16px 24px;
+            padding: 14px 24px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
         nav .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.8rem;
             font-weight: 700;
-            color: var(--text);
+            color: var(--paper);
             text-decoration: none;
-            letter-spacing: -0.02em;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
         }
-
-        nav .logo span { color: var(--accent); }
-
         nav .nav-links {
             display: flex;
-            gap: 32px;
+            gap: 28px;
             list-style: none;
+            align-items: center;
         }
-
         nav .nav-links a {
+            font-family: 'Space Mono', monospace;
             color: var(--text-muted);
             text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 500;
-            letter-spacing: 0.05em;
+            font-size: 0.72rem;
+            font-weight: 400;
+            letter-spacing: 0.12em;
             text-transform: uppercase;
             transition: color 0.2s;
         }
-
         nav .nav-links a:hover { color: var(--accent); }
+        nav .nav-cta {
+            display: inline-block;
+            padding: 8px 18px;
+            background: var(--accent);
+            color: var(--ink);
+            font-family: 'Space Mono', monospace;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        nav .nav-cta:hover { background: #e0ff4d; }
 
-        /* Hero */
+        /* === HERO === */
         .hero {
             min-height: 100vh;
-            display: flex;
-            align-items: center;
             padding: 120px 24px 80px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            max-width: 1400px;
+            margin: 0 auto;
+            align-items: center;
             position: relative;
             overflow: hidden;
         }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 800px;
-            height: 800px;
-            background: radial-gradient(circle, var(--accent-dim) 0%, transparent 70%);
-            pointer-events: none;
-        }
+        .hero-left { position: relative; z-index: 2; }
 
-        .hero-photo {
-            width: 260px;
-            height: 340px;
-            border-radius: 16px;
-            object-fit: cover;
-            object-position: top center;
-            border: 2px solid var(--border);
-            margin-bottom: 20px;
-            filter: contrast(1.1) brightness(1.05);
-            transition: all 0.3s;
-        }
-
-        .hero-photo:hover {
-            filter: contrast(1.15) brightness(1.1);
-            border-color: var(--accent);
-            box-shadow: 0 8px 40px rgba(200, 255, 0, 0.15);
-        }
-
-        .hero-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            width: 100%;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-        }
-
-        .hero-text h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 700;
-            line-height: 1.1;
-            letter-spacing: -0.03em;
-            margin-bottom: 24px;
-        }
-
-        .hero-text h1 .accent { color: var(--accent); font-style: italic; }
-
-        .hero-text .subtitle {
-            font-size: 1.15rem;
-            color: var(--text-muted);
-            line-height: 1.8;
-            margin-bottom: 40px;
-            max-width: 520px;
-        }
-
-        .hero-text .subtitle strong { color: var(--text); }
-
-        .hero-cta-group {
+        .hero-eyebrow {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--accent);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 28px;
             display: flex;
-            gap: 16px;
-            flex-wrap: wrap;
+            align-items: center;
+            gap: 12px;
         }
+        .hero-eyebrow::before {
+            content: '';
+            display: inline-block;
+            width: 40px;
+            height: 2px;
+            background: var(--accent);
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+            font-weight: 900;
+            line-height: 1.0;
+            letter-spacing: -0.04em;
+            margin-bottom: 32px;
+            color: var(--paper);
+        }
+        .hero h1 .line-display {
+            display: block;
+        }
+        .hero h1 .italic-accent {
+            color: var(--accent);
+            font-style: italic;
+            font-weight: 800;
+        }
+        .hero h1 .strikethrough {
+            color: var(--text-muted);
+            text-decoration: line-through;
+            text-decoration-color: var(--accent-2);
+            text-decoration-thickness: 3px;
+        }
+
+        .hero-desc {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            max-width: 480px;
+            margin-bottom: 40px;
+            line-height: 1.75;
+        }
+        .hero-desc strong { color: var(--paper); }
+
+        .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
 
         .btn-primary {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            padding: 16px 32px;
+            gap: 10px;
+            padding: 16px 28px;
             background: var(--accent);
-            color: var(--bg);
+            color: var(--ink);
+            font-family: 'Space Mono', monospace;
             font-weight: 700;
-            font-size: 0.95rem;
+            font-size: 0.78rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
             text-decoration: none;
             border: none;
-            border-radius: 6px;
             cursor: pointer;
-            transition: all 0.2s;
-            letter-spacing: -0.01em;
+            transition: all 0.15s;
         }
+        .btn-primary:hover { background: #e0ff4d; transform: translateY(-1px); }
 
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(200, 255, 0, 0.3); }
-
-        .btn-secondary {
+        .btn-outline {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            padding: 16px 32px;
+            gap: 10px;
+            padding: 16px 28px;
             background: transparent;
-            color: var(--text);
-            font-weight: 600;
-            font-size: 0.95rem;
+            color: var(--paper);
+            font-family: 'Space Mono', monospace;
+            font-weight: 400;
+            font-size: 0.78rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
             text-decoration: none;
             border: 1px solid var(--border);
-            border-radius: 6px;
             cursor: pointer;
-            transition: all 0.2s;
+            transition: all 0.15s;
         }
+        .btn-outline:hover { border-color: var(--paper); }
 
-        .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
-
-        /* Hero right: trust signals */
+        /* Hero right — photo + collage */
         .hero-right {
+            position: relative;
             display: flex;
-            flex-direction: column;
-            gap: 24px;
+            justify-content: center;
+            align-items: flex-start;
         }
 
-        .trust-bar {
+        .hero-photo-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero-photo {
+            width: 320px;
+            height: 420px;
+            object-fit: cover;
+            object-position: top center;
+            display: block;
+            filter: contrast(1.25) brightness(1.0) grayscale(0.7);
+            border: 3px solid var(--ink);
+        }
+
+        .hero-photo-tag {
+            position: absolute;
+            top: -14px;
+            right: -20px;
+            background: var(--accent);
+            color: var(--ink);
+            font-family: 'Space Mono', monospace;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            transform: rotate(3deg);
+        }
+
+        .hero-photo-caption {
+            position: absolute;
+            bottom: -18px;
+            left: 20px;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.6rem;
+            color: var(--text-muted);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            background: var(--bg);
+            padding: 4px 12px;
+        }
+
+        /* Decorative collage elements */
+        .collage-stripe {
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            background: var(--accent-2);
+        }
+        .collage-stripe-1 { top: 30%; left: -30px; width: 60%; }
+        .collage-stripe-2 { bottom: 15%; right: -20px; width: 40%; }
+        .collage-stripe-3 { top: 55%; left: -15px; width: 25%; background: var(--accent); }
+
+        .hero-brand-list {
+            margin-top: 48px;
             display: flex;
             flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 8px;
+            gap: 8px;
         }
-
-        .trust-pill {
-            padding: 8px 16px;
-            background: var(--surface);
+        .brand-tag {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.65rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 5px 12px;
             border: 1px solid var(--border);
-            border-radius: 100px;
-            font-size: 0.8rem;
-            font-weight: 500;
             color: var(--text-muted);
-            white-space: nowrap;
+            transition: all 0.2s;
         }
+        .brand-tag:hover { border-color: var(--accent); color: var(--accent); }
+        .brand-tag.lit { border-color: var(--accent-2); color: var(--accent-2); }
 
-        .trust-pill.highlight {
-            border-color: var(--accent-mid);
-            color: var(--accent);
-            background: var(--accent-dim);
-        }
-
-        .metric-cards {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-        }
-
-        .metric-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 24px;
-            transition: all 0.3s;
-        }
-
-        .metric-card:hover {
-            border-color: var(--accent-mid);
-            transform: translateY(-2px);
-        }
-
-        .metric-card .number {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: var(--accent);
-            line-height: 1;
-            margin-bottom: 6px;
-        }
-
-        .metric-card .label {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            line-height: 1.4;
-        }
-
-        /* Section shared */
+        /* === SECTIONS === */
         section { padding: 100px 24px; }
 
         .section-inner {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
         }
 
-        .section-label {
-            display: inline-block;
-            font-size: 0.75rem;
+        .section-tag {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.65rem;
             font-weight: 700;
+            letter-spacing: 0.25em;
             text-transform: uppercase;
-            letter-spacing: 0.15em;
             color: var(--accent);
-            margin-bottom: 16px;
-            padding: 6px 14px;
-            background: var(--accent-dim);
-            border-radius: 4px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .section-tag::before {
+            content: '//';
+            color: var(--text-muted);
         }
 
         .section-title {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(2rem, 3.5vw, 2.8rem);
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            margin-bottom: 20px;
-            line-height: 1.15;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 900;
+            letter-spacing: -0.03em;
+            margin-bottom: 16px;
+            line-height: 1.1;
+        }
+        .section-title em { 
+            color: var(--accent); 
+            font-style: italic; 
         }
 
         .section-desc {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             color: var(--text-muted);
-            max-width: 640px;
+            max-width: 620px;
             margin-bottom: 48px;
-            line-height: 1.7;
+            line-height: 1.75;
         }
 
-        /* Track record */
-        #track-record { background: var(--surface); }
-
-        .timeline {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
+        /* Paper inset blocks */
+        .paper-block {
+            background: var(--paper);
+            color: var(--ink);
+            padding: 48px;
+            position: relative;
+        }
+        .paper-block p { color: var(--ink); }
+        .paper-block p strong { color: var(--ink); }
+        .paper-block::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--accent);
         }
 
-        .timeline-item {
-            display: grid;
-            grid-template-columns: 60px 1fr;
-            gap: 20px;
-            padding: 28px;
-            background: var(--surface-2);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            transition: all 0.3s;
-        }
-
-        .timeline-item:hover {
-            border-color: var(--accent-mid);
-            background: rgba(200, 255, 0, 0.03);
-        }
-
-        .timeline-icon {
-            font-size: 1.8rem;
-            line-height: 1;
-        }
-
-        .timeline-content h3 {
-            font-size: 1rem;
-            font-weight: 600;
-            margin-bottom: 6px;
-        }
-
-        .timeline-content h3 strong { color: var(--accent); }
-
-        .timeline-content p {
-            font-size: 0.92rem;
-            color: var(--text-muted);
-            line-height: 1.6;
-        }
-
-        .timeline-content p .brand { color: var(--text); font-weight: 600; }
-
-        /* What I do */
+        /* === WHAT I DO === */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .service-card {
-            background: var(--surface);
+            gap: 1px;
+            background: var(--border);
             border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 32px 28px;
-            transition: all 0.3s;
-            position: relative;
         }
-
-        .service-card:hover {
-            border-color: var(--accent-mid);
-            transform: translateY(-3px);
+        .service-card {
+            background: var(--bg);
+            padding: 36px 28px;
+            transition: all 0.2s;
         }
-
-        .service-card .icon {
-            font-size: 2rem;
-            margin-bottom: 16px;
-            display: block;
+        .service-card:hover { background: var(--bg-warm); }
+        .service-card .service-num {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--accent);
+            opacity: 0.2;
+            line-height: 1;
+            margin-bottom: 12px;
         }
-
         .service-card h3 {
-            font-size: 1.1rem;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.85rem;
             font-weight: 700;
+            letter-spacing: 0.02em;
             margin-bottom: 10px;
+            color: var(--paper);
         }
-
         .service-card p {
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             color: var(--text-muted);
             line-height: 1.6;
         }
 
-        /* How I work */
-        #approach { background: var(--surface); }
+        /* === TRACK RECORD === */
+        #track-record {
+            background: var(--paper);
+            color: var(--ink);
+        }
+        #track-record .section-tag { color: var(--accent-2); }
+        #track-record .section-tag::before { color: var(--text-muted); }
+        #track-record .section-title { color: var(--ink); }
+        #track-record .section-title em { color: var(--accent-2); }
+        #track-record .section-desc { color: #5a5a50; }
 
-        .approach-steps {
+        .timeline {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: var(--paper-dark);
+            border: 1px solid var(--paper-dark);
+        }
+        .timeline-item {
+            background: var(--paper);
+            padding: 32px 28px;
+            transition: all 0.2s;
+        }
+        .timeline-item:hover { background: #f0ead8; }
+        .timeline-item .t-emoji {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            display: block;
+        }
+        .timeline-item h3 {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: var(--ink);
+            letter-spacing: 0.01em;
+        }
+        .timeline-item h3 em { color: var(--accent-2); font-style: normal; }
+        .timeline-item p {
+            font-size: 0.85rem;
+            color: #5a5a50;
+            line-height: 1.55;
+        }
+        .timeline-item p .brand-name { color: var(--ink); font-weight: 600; }
+
+        /* === APPROACH === */
+        .steps-row {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            margin-top: 48px;
+            gap: 0;
+            border: 1px solid var(--border);
         }
-
-        .step-card {
-            text-align: center;
-            padding: 32px 20px;
+        .step {
+            padding: 40px 28px;
+            border-right: 1px solid var(--border);
+            transition: all 0.2s;
             position: relative;
         }
-
-        .step-card .step-num {
+        .step:last-child { border-right: none; }
+        .step:hover { background: var(--bg-warm); }
+        .step .step-n {
             font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            font-weight: 700;
+            font-size: 3.5rem;
+            font-weight: 900;
             color: var(--accent);
-            opacity: 0.3;
+            opacity: 0.15;
             line-height: 1;
-            margin-bottom: 12px;
+            margin-bottom: 16px;
         }
-
-        .step-card h3 {
-            font-size: 1rem;
+        .step h3 {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.82rem;
             font-weight: 700;
             margin-bottom: 8px;
         }
-
-        .step-card p {
-            font-size: 0.88rem;
+        .step p {
+            font-size: 0.85rem;
             color: var(--text-muted);
-            line-height: 1.5;
+            line-height: 1.55;
         }
 
-        /* CTA Full Width */
-        .cta-section {
+        /* === QUOTE / VIBE === */
+        .vibe-section {
             padding: 80px 24px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
         }
-
-        .cta-section::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, rgba(200,255,0,0.08) 0%, rgba(10,10,10,0) 60%);
-            pointer-events: none;
+        .vibe-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
         }
-
-        .cta-section .section-inner {
-            position: relative;
-        }
-
-        .cta-section h2 {
+        .vibe-quote {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(1.8rem, 3vw, 2.5rem);
-            font-weight: 700;
-            margin-bottom: 16px;
+            font-size: clamp(1.6rem, 3vw, 2.4rem);
+            font-weight: 800;
+            line-height: 1.2;
+            color: var(--paper);
             letter-spacing: -0.02em;
         }
+        .vibe-quote em { color: var(--accent); font-style: italic; }
+        .vibe-body {
+            font-size: 1rem;
+            color: var(--text-muted);
+            line-height: 1.75;
+        }
+        .vibe-body strong { color: var(--paper); }
 
+        /* === CTA === */
+        .cta-section {
+            padding: 100px 24px;
+            text-align: center;
+            border-top: 4px solid var(--accent);
+        }
+        .cta-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8rem, 3.5vw, 3rem);
+            font-weight: 900;
+            letter-spacing: -0.03em;
+            margin-bottom: 16px;
+        }
         .cta-section p {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             color: var(--text-muted);
             margin-bottom: 36px;
-            max-width: 540px;
+            max-width: 500px;
             margin-left: auto;
             margin-right: auto;
         }
+        .cta-section .btn-primary { font-size: 0.85rem; padding: 18px 36px; }
 
-        .cta-section .btn-primary { font-size: 1.05rem; padding: 18px 40px; }
-
-        /* Footer */
+        /* === FOOTER === */
         footer {
-            border-top: 1px solid var(--border);
+            border-top: 2px solid var(--ink);
             padding: 40px 24px;
+            background: var(--bg);
         }
-
         .footer-inner {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
@@ -480,312 +528,312 @@
             flex-wrap: wrap;
             gap: 20px;
         }
-
+        .footer-left {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
         .footer-links {
             display: flex;
             gap: 24px;
         }
-
         .footer-links a {
+            font-family: 'Space Mono', monospace;
             color: var(--text-muted);
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.72rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
             transition: color 0.2s;
         }
-
         .footer-links a:hover { color: var(--accent); }
 
-        .footer-copy {
-            color: var(--text-muted);
-            font-size: 0.82rem;
-        }
-
-        /* Responsive */
+        /* === RESPONSIVE === */
         @media (max-width: 900px) {
-            .hero-inner {
-                grid-template-columns: 1fr;
-                gap: 48px;
-            }
+            .hero { grid-template-columns: 1fr; gap: 40px; padding-top: 100px; }
+            .hero-right { order: -1; }
+            .hero-photo { width: 220px; height: 290px; }
             .services-grid { grid-template-columns: 1fr 1fr; }
-            .approach-steps { grid-template-columns: 1fr 1fr; }
-            .metric-cards { grid-template-columns: 1fr 1fr; }
+            .timeline { grid-template-columns: 1fr 1fr; }
+            .steps-row { grid-template-columns: 1fr 1fr; }
+            .step { border-right: none; border-bottom: 1px solid var(--border); }
+            .vibe-inner { grid-template-columns: 1fr; gap: 32px; }
         }
-
         @media (max-width: 600px) {
             nav .nav-links { display: none; }
-            .hero { padding-top: 80px; }
-            .hero-text h1 { font-size: 2.2rem; }
+            .hero h1 { font-size: 2.4rem; }
+            .hero-photo { width: 180px; height: 240px; }
             .services-grid { grid-template-columns: 1fr; }
-            .approach-steps { grid-template-columns: 1fr 2fr; }
-            .timeline-item { grid-template-columns: 40px 1fr; padding: 20px; }
-            .hero-cta-group { flex-direction: column; }
-            .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+            .timeline { grid-template-columns: 1fr; }
+            .steps-row { grid-template-columns: 1fr; }
+            .hero-ctas { flex-direction: column; }
+            .btn-primary, .btn-outline { width: 100%; justify-content: center; }
+            .collage-stripe { display: none; }
         }
 
-        /* Animations */
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(24px); }
+        /* === ANIMATIONS === */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(16px); }
             to { opacity: 1; transform: translateY(0); }
         }
-
-        .animate-in {
+        .anim-target {
             opacity: 0;
-            animation: fadeInUp 0.6s ease-out forwards;
+            animation: fadeUp 0.5s ease forwards;
         }
-
-        .animate-in:nth-child(2) { animation-delay: 0.1s; }
-        .animate-in:nth-child(3) { animation-delay: 0.2s; }
-        .animate-in:nth-child(4) { animation-delay: 0.3s; }
     </style>
 </head>
 <body>
 
-<!-- Navigation -->
+<!-- NAV -->
 <nav>
     <div class="nav-inner">
-        <a href="#" class="logo">Matteo<span>.</span>Betti</a>
+        <a href="#" class="logo">Matteo Betti</a>
         <ul class="nav-links">
-            <li><a href="#cosa-faccio">Cosa faccio</a></li>
-            <li><a href="#track-record">Track Record</a></li>
-            <li><a href="#approach">Approccio</a></li>
-            <li><a href="#contatto" class="btn-primary" style="padding:8px 20px;font-size:0.82rem;border-radius:4px;">Prenota una call</a></li>
+            <li><a href="#cosa-faccio">Stack</a></li>
+            <li><a href="#track-record">Track</a></li>
+            <li><a href="#approccio">Approccio</a></li>
         </ul>
+        <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ06yuErQ-ngr5w3PYEmV8ZLenL1so0HinYGvuxYoFG3R1mRBghiz_x_Xz0sG8y4p6D-_eP9uZO8?gv=true" class="nav-cta" target="_blank">Prenota call</a>
     </div>
 </nav>
 
-<!-- Hero -->
-<section class="hero">
-    <div class="hero-inner">
-        <div class="hero-text">
-            <h1>Il marketing che <span class="accent">porta risultati</span>, non promesse.</h1>
-            <p class="subtitle">
-                Dopo 10+ anni con <strong>Unilever, Nestlé, P&G, Barilla, Samsung</strong>, 
-                ho capito una cosa: il marketing che funziona unisce <strong>ragionamento, misurazione e creativit&agrave;</strong>. 
-                Niente guru, niente teoria. Solo un metodo collaudato che trasforma budget in crescita.
-            </p>
-            <div class="hero-cta-group">
-                <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ06yuErQ-ngr5w3PYEmV8ZLenL1so0HinYGvuxYoFG3R1mRBghiz_x_Xz0sG8y4p6D-_eP9uZO8?gv=true" class="btn-primary" target="_blank">
-                    Prenota una call gratuita &rarr;
-                </a>
-                <a href="#track-record" class="btn-secondary">
-                    Vedi il track record
-                </a>
-            </div>
+<!-- HERO -->
+<section class="hero" id="top">
+    <div class="hero-left">
+        <div class="hero-eyebrow">Consulente Marketing Full Stack</div>
+
+        <h1>
+            <span class="line-display">Dove <span class="italic-accent">strategia,</span></span>
+            <span class="line-display">prodotto e crescita</span>
+            <span class="line-display"><span class="strikethrough">si incontrano</span> si fondono.</span>
+        </h1>
+
+        <p class="hero-desc">
+            Non sono un marketer che lancia campagne e sparisce. Lavoro <strong>dentro lo stack</strong>: 
+            ricerche utenti, posizionamento, funnel, automazioni, design sprint con devs e designers. 
+            Da corporate a startup, il filo rosso è lo stesso: <strong>mettere il prodotto al centro del mercato</strong>.
+        </p>
+
+        <div class="hero-ctas">
+            <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ06yuErQ-ngr5w3PYEmV8ZLenL1so0HinYGvuxYoFG3R1mRBghiz_x_Xz0sG8y4p6D-_eP9uZO8?gv=true" class="btn-primary" target="_blank">
+                Parliamone &rarr;
+            </a>
+            <a href="#track-record" class="btn-outline">
+                Il mio track record
+            </a>
         </div>
-        <div class="hero-right">
-            <img src="matteo-photo.jpg" alt="Matteo Betti — Consulente Marketing" class="hero-photo" loading="eager">
-            <div class="trust-bar">
-                <span class="trust-pill highlight">Unilever</span>
-                <span class="trust-pill highlight">Nestlé</span>
-                <span class="trust-pill highlight">P&G</span>
-                <span class="trust-pill">Barilla</span>
-                <span class="trust-pill">Samsung</span>
-                <span class="trust-pill">McDonald's</span>
-                <span class="trust-pill">Booking</span>
-                <span class="trust-pill">Just Eat</span>
-            </div>
-            <div class="metric-cards">
-                <div class="metric-card animate-in">
-                    <div class="number">10+</div>
-                    <div class="label">Anni di esperienza<br>marketing full-stack</div>
-                </div>
-                <div class="metric-card animate-in">
-                    <div class="number">50+</div>
-                    <div class="label">Brand gestiti<br>tra corporate e startup</div>
-                </div>
-                <div class="metric-card animate-in">
-                    <div class="number">7</div>
-                    <div class="label">Lingue di lavoro<br>IT, EN, qualche dialetto</div>
-                </div>
-                <div class="metric-card animate-in">
-                    <div class="number">1</div>
-                    <div class="label">Interlocutore unico:<br>parli sempre con me</div>
-                </div>
-            </div>
+
+        <div class="hero-brand-list">
+            <span class="brand-tag lit">Unilever</span>
+            <span class="brand-tag lit">Nestl&eacute;</span>
+            <span class="brand-tag lit">P&G</span>
+            <span class="brand-tag">Barilla</span>
+            <span class="brand-tag">Samsung</span>
+            <span class="brand-tag">McDonald's</span>
+            <span class="brand-tag">Booking</span>
+            <span class="brand-tag">Just Eat</span>
+        </div>
+    </div>
+
+    <div class="hero-right">
+        <div class="hero-photo-wrapper">
+            <div class="collage-stripe collage-stripe-1"></div>
+            <div class="collage-stripe collage-stripe-2"></div>
+            <div class="collage-stripe collage-stripe-3"></div>
+            <img src="matteo-photo.jpg" alt="Matteo Betti" class="hero-photo">
+            <div class="hero-photo-tag">10+ anni</div>
+            <div class="hero-photo-caption">Bologna / remoto / ovunque serva</div>
         </div>
     </div>
 </section>
 
-<!-- What I Do -->
+<!-- VIBE SECTION -->
+<div class="vibe-section">
+    <div class="vibe-inner">
+        <blockquote class="vibe-quote">
+            "Quello che mi ispira: imparare tool nuovi, 
+            lavorare in team <em>snelli</em>, 
+            vedere le piccole realt&agrave; <em>_scalare_</em>."
+        </blockquote>
+        <div class="vibe-body">
+            <p>
+                Vengo dal corporate — ricerche quantitative per Unilever e Nestl&eacute;, campagne per Barilla e Samsung — 
+                ma l'energia che mi accende &egrave; un'altra: <strong>l'intersezione tra marketing e prodotto</strong>. 
+                Lavoro con designers e devs in design sprint e user research perch&eacute; &egrave; l&igrave; che il marketing 
+                smette di essere rumorio e diventa valore.
+            </p>
+            <p style="margin-top: 16px;">
+                Ogni progetto &egrave; un sistema, non una campagna. Less silos, pi&ugrave; visione organica. 
+                E soprattutto, pi&ugrave; <strong>risultati</strong>.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- WHAT I DO -->
 <section id="cosa-faccio">
     <div class="section-inner">
-        <span class="section-label">Cosa faccio</span>
-        <h2 class="section-title">Meno silos, più visione organica.</h2>
+        <div class="section-tag">Lo stack</div>
+        <h2 class="section-title">
+            Meno silos, pi&ugrave; <em>sistema</em>.
+        </h2>
         <p class="section-desc">
-            Non sono un copywriter, né un media buyer, né un SEO. Sono quello che tiene insieme il sistema e fa funzionare i pezzi. Dal quadro strategico alla singola campagna, tutto fila nella stessa direzione. Meno silo, più visione d'insieme. E soprattutto, più risultati.
+            Non sono un copywriter, n&eacute; un media buyer, n&eacute; un SEO. Sono quello che tiene insieme il sistema e fa funzionare i pezzi. Dal quadro strategico alla singola campagna, tutto fila nella stessa direzione.
         </p>
         <div class="services-grid">
             <div class="service-card">
-                <span class="icon">🎯</span>
+                <div class="service-num">01</div>
                 <h3>Strategia & Posizionamento</h3>
-                <p>Analisi competitiva, definizione target, value proposition. Non è un deck di 80 slide, è il quadro che fa andare tutto il resto nella direzione giusta.</p>
+                <p>Analisi competitiva, definizione target, value proposition. Il quadro che fa andare tutto il resto nella direzione giusta.</p>
             </div>
             <div class="service-card">
-                <span class="icon">📊</span>
-                <h3>Performance & Data</h3>
-                <p>Campagne paid, tracking, attribution, ottimizzazione continua. Ogni euro speso sa dove va e perché. Niente budget buttato per "visibilità".</p>
+                <div class="service-num">02</div>
+                <h3>Product-Market Fit</h3>
+                <p>User research, design sprint, test con utenti. La giuntura tra prodotto e mercato: dove il marketing diventa utile, non rumoroso.</p>
             </div>
             <div class="service-card">
-                <span class="icon">✍️</span>
-                <h3>Content & Narrazione</h3>
-                <p>SEO, blog, social, email. Non contenuti per riempire: contenuti che educano, qualificano e trasformano chi legge in chi compra.</p>
+                <div class="service-num">03</div>
+                <h3>Growth & Performance</h3>
+                <p>Funnel, campagne paid, tracking, attribution. Ogni euro speso sa dove va e perch&eacute;. Niente budget buttato per "visibilit&agrave;".</p>
             </div>
             <div class="service-card">
-                <span class="icon">🚀</span>
-                <h3>GTM & Launch</h3>
-                <p>Go-to-market per prodotti e startup. Dalla strategia di lancio al setup dei canali, fino ai primi numeri che contano. Presentato pure a investitori di Booking e Just Eat.</p>
+                <div class="service-num">04</div>
+                <h3>Content & SEO</h3>
+                <p>Blog, social, email, contenuti che educano e qualificano. Non per riempire: per trasformare chi legge in chi compra.</p>
             </div>
             <div class="service-card">
-                <span class="icon">🔧</span>
-                <h3>Marketing Operations</h3>
-                <p>Automazioni, integrazioni CRM, workflow. Il marketing non è solo creatività: è infrastructure. Chi ha i sistemi migliori vince a parità di idea.</p>
+                <div class="service-num">05</div>
+                <h3>Marketing Ops & Automazioni</h3>
+                <p>CRM, integrazioni, workflow. Il marketing &egrave; anche infrastructure: chi ha i sistemi migliori vince a parit&agrave; di idea.</p>
             </div>
             <div class="service-card">
-                <span class="icon">🤝</span>
+                <div class="service-num">06</div>
                 <h3>Fractional Marketing Lead</h3>
-                <p>Per aziende che non hanno bisogno di un CMO full-time ma di qualcuno che dia direzione e operatività. Ci sono io, non un team junior.</p>
+                <p>Per chi non ha bisogno di un CMO full-time ma di qualcuno che dia direzione e operativit&agrave;. Ci sono io, non un team junior.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Track Record -->
+<!-- TRACK RECORD -->
 <section id="track-record">
     <div class="section-inner">
-        <span class="section-label">Track Record</span>
-        <h2 class="section-title">I fatti, non le parole.</h2>
+        <div class="section-tag">Track record</div>
+        <h2 class="section-title">
+            Dai fatti, non dalle <em>parole</em>.
+        </h2>
         <p class="section-desc">
-            Dal corporate alla startup, ogni esperienza mi ha dato un pezzo del puzzle. Il risultato è un consulente che sa come funzionano entrambi i mondi.
+            Dal corporate alla startup, ogni esperienza mi ha dato un pezzo del puzzle. Il risultato &egrave; un consulente che sa come funzionano entrambi i mondi.
         </p>
         <div class="timeline">
             <div class="timeline-item">
-                <div class="timeline-icon">🔬</div>
-                <div class="timeline-content">
-                    <h3><strong>Research Analyst</strong> — Top 3 agency network mondiale</h3>
-                    <p>Ricerche quantitative, competitive benchmarking e test di prodotto per <span class="brand">Unilever, Nestlé, P&G</span>. Qui ho imparato che i numeri dicono sempre la verit&agrave;, basta saperli leggere.</p>
-                </div>
+                <span class="t-emoji">&#x1F52C;</span>
+                <h3><em>Research Analyst</em> — Top 3 agency network</h3>
+                <p>Ricerche quantitative, competitive benchmarking e test di prodotto per <span class="brand-name">Unilever, Nestl&eacute;, P&G</span>. Qui ho imparato che i numeri dicono sempre la verit&agrave;.</p>
             </div>
             <div class="timeline-item">
-                <div class="timeline-icon">🌐</div>
-                <div class="timeline-content">
-                    <h3><strong>Digital Strategist</strong> — Super agenzia full-service</h3>
-                    <p><span class="brand">50+ clienti</span> gestiti in ogni settore possibile. La fase in cui ho capito che la strategia senza operativit&agrave; &egrave; solo teoria.</p>
-                </div>
+                <span class="t-emoji">&#x1F310;</span>
+                <h3><em>Digital Strategist</em> — Agenzia full-service</h3>
+                <p><span class="brand-name">50+ clienti</span> gestiti in ogni settore. La fase in cui ho capito che strategia senza operativit&agrave; &egrave; solo teoria.</p>
             </div>
             <div class="timeline-item">
-                <div class="timeline-icon">🚀</div>
-                <div class="timeline-content">
-                    <h3><strong>Campaign Manager</strong> — Scaleup leader proximity marketing</h3>
-                    <p>Campagne per <span class="brand">Barilla, Samsung, McDonald's</span> e decine di altri brand. Quando il budget &egrave; grande, non ti puoi permettere errori.</p>
-                </div>
+                <span class="t-emoji">&#x1F680;</span>
+                <h3><em>Campaign Manager</em> — Scaleup proximity marketing</h3>
+                <p>Campagne per <span class="brand-name">Barilla, Samsung, McDonald's</span> e decine di altri brand. Budget grandi, zero spazio per errori.</p>
             </div>
             <div class="timeline-item">
-                <div class="timeline-icon">💥</div>
-                <div class="timeline-content">
-                    <h3><strong>Marketing Team</strong> — Startup SaaS (fundraising)</h3>
-                    <p>Costruito e presentato il piano marketing agli investitori di <span class="brand">Booking e Just Eat</span>. Dal deck ai numeri reali, con la pressione della pitch addosso.</p>
-                </div>
+                <span class="t-emoji">&#x1F4A5;</span>
+                <h3><em>Marketing</em> — Startup SaaS (fundraising)</h3>
+                <p>Costruito e presentato il piano marketing agli investitori di <span class="brand-name">Booking e Just Eat</span>. Dal deck ai numeri reali.</p>
             </div>
             <div class="timeline-item">
-                <div class="timeline-icon">📈</div>
-                <div class="timeline-content">
-                    <h3><strong>Rebranding & Growth</strong> — Media company nazionale</h3>
-                    <p>Cura del rebranding e della crescita per una delle rassegne stampa più seguite in Italia. <span class="brand">Raddoppiato il MRR</span> in un anno. Strategia e content che funzionano insieme.</p>
-                </div>
+                <span class="t-emoji">&#x1F4C8;</span>
+                <h3><em>Rebranding & Growth</em> — Media company</h3>
+                <p>Rebranding e crescita di una delle rassegne stampa pi&ugrave; seguite in Italia. <span class="brand-name">MRR raddoppiato</span> in un anno.</p>
             </div>
             <div class="timeline-item">
-                <div class="timeline-icon">🏆</div>
-                <div class="timeline-content">
-                    <h3><strong>Marketing Manager</strong> — Startup energetica</h3>
-                    <p>Responsabile marketing e fundraising: <span class="brand">raccolti 500k+</span> in un anno. Il ponte tra marketing e business che pochi sanno fare.</p>
-                </div>
+                <span class="t-emoji">&#x1F3C6;</span>
+                <h3><em>Marketing Manager</em> — Startup energetica</h3>
+                <p>Responsabile marketing e fundraising: <span class="brand-name">raccolti 500k+</span> in un anno. Il ponte tra marketing e business.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Approach -->
-<section id="approach">
+<!-- APPROACH -->
+<section id="approccio">
     <div class="section-inner">
-        <span class="section-label">Come lavoro</span>
-        <h2 class="section-title">Niente proposal infinite. Facciamo parlare i fatti.</h2>
+        <div class="section-tag">Approccio</div>
+        <h2 class="section-title">
+            Niente report infiniti. <em>Facciamo</em>.
+        </h2>
         <p class="section-desc">
-            Il mio metodo è semplice: ascolto, diagnosi, azione. Niente mesi di discovery, niente report da 40 pagine. Risultati visibili nelle prime settimane.
+            Ascolto, diagnosi, azione. Niente mesi di discovery, niente proposal da 40 pagine. Risultati visibili nelle prime settimane.
         </p>
-        <div class="approach-steps">
-            <div class="step-card">
-                <div class="step-num">01</div>
+        <div class="steps-row">
+            <div class="step">
+                <div class="step-n">01</div>
                 <h3>Call conoscitiva</h3>
                 <p>30 minuti per capire chi sei, cosa vendi, dove vuoi andare. Gratis, senza impegno.</p>
             </div>
-            <div class="step-card">
-                <div class="step-num">02</div>
+            <div class="step">
+                <div class="step-n">02</div>
                 <h3>Diagnosi rapida</h3>
-                <p>Analizzo il tuo funnel, i tuoi dati, la tua concorrenza. Ti dico cosa vedo in pochi giorni, non settimane.</p>
+                <p>Analizzo funnel, dati, concorrenza. Ti dico cosa vedo in giorni, non settimane.</p>
             </div>
-            <div class="step-card">
-                <div class="step-num">03</div>
+            <div class="step">
+                <div class="step-n">03</div>
                 <h3>Piano d'azione</h3>
-                <p>Proposta concreta con priorità, timeline, budget. Se ti torna, partiamo. Se no, hai comunque una diagnosi utile.</p>
+                <p>Proposta concreta con priorit&agrave;, timeline, budget. Se ti torna, partiamo. Se no, hai una diagnosi utile.</p>
             </div>
-            <div class="step-card">
-                <div class="step-num">04</div>
+            <div class="step">
+                <div class="step-n">04</div>
                 <h3>Esecuzione & misura</h3>
-                <p>Non faccio solo la strategia: la eseguo. E misuro tutto, perché quello che non misuri non migliora.</p>
+                <p>Non faccio solo la strategia: la eseguo. E misuro tutto, perch&eacute; quello che non misuri non migliora.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- CTA Final -->
+<!-- CTA -->
 <section class="cta-section" id="contatto">
     <div class="section-inner">
-        <h2>Pronto a fare parlare i numeri?</h2>
+        <h2>Vuoi mettere il prodotto al centro del mercato?</h2>
         <p>30 minuti di call, zero impegno. Se ci si capisce, si parte. Se no, ti porti a casa una diagnosi gratuita.</p>
         <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ06yuErQ-ngr5w3PYEmV8ZLenL1so0HinYGvuxYoFG3R1mRBghiz_x_Xz0sG8y4p6D-_eP9uZO8?gv=true" class="btn-primary" target="_blank">
-            Prenota una call gratuita &rarr;
+            Prenota una call &rarr;
         </a>
     </div>
 </section>
 
-<!-- Footer -->
+<!-- FOOTER -->
 <footer>
     <div class="footer-inner">
+        <div class="footer-left">
+            &copy; 2026 Matteo Betti &mdash; Bologna, Italia
+        </div>
         <div class="footer-links">
             <a href="https://www.linkedin.com/in/matteo-betti-ita/" target="_blank">LinkedIn</a>
             <a href="mailto:mat.bet09@gmail.com">Email</a>
             <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ06yuErQ-ngr5w3PYEmV8ZLenL1so0HinYGvuxYoFG3R1mRBghiz_x_Xz0sG8y4p6D-_eP9uZO8?gv=true" target="_blank">Calendario</a>
         </div>
-        <div class="footer-copy">
-            &copy; 2026 Matteo Betti. Consulente marketing, musicista, notturno. Bologna, Italia.
-        </div>
     </div>
 </footer>
 
 <script>
-    // Smooth scroll for nav links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) target.scrollIntoView({ behavior: 'smooth' });
-        });
-    });
-
-    // Intersection Observer for animations
+    // Intersection Observer for scroll animations
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('anim-target');
+                observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.15 });
 
-    document.querySelectorAll('.service-card, .timeline-item, .step-card').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'all 0.5s ease-out';
+    document.querySelectorAll('.service-card, .timeline-item, .step, .vibe-section').forEach(el => {
         observer.observe(el);
     });
 </script>
